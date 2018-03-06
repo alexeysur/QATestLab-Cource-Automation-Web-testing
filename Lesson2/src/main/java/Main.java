@@ -16,6 +16,7 @@ import pages.DashBoardPage;
 import pages.LoginPage;
 import BaseTest.BaseEnvTest;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
@@ -25,11 +26,10 @@ public class Main extends BaseEnvTest {
 
     WebDriver driver;
     LoginPage loginPage;
-//    By locator = By.className("menu");
 
     String propertyDriver = System.getProperty("user.dir") + "//src//main//resources//chromedriver.exe";
     System.setProperty("webdriver.chrome.driver", propertyDriver);
-/*
+
     driver = new ChromeDriver();
     driver.manage().window().maximize();
 
@@ -50,7 +50,7 @@ public class Main extends BaseEnvTest {
 
     quitDriver(driver);
     System.out.println("Exit from administation panel ater successfull task #1");
-*/
+
    //Second part task
     driver = new ChromeDriver();
     driver.manage().window().maximize();
@@ -62,22 +62,8 @@ public class Main extends BaseEnvTest {
 
     System.out.println("Cycle traversal of list items");
 
-    DashBoardPage dashBoardPage = new DashBoardPage(driver);
     dashBoardPage.CheckPage();
 
-
-/*
-    for(WebElement element : myList){
-      element.click();
-      sleep(1000);
-//      dashBoardPage.CheckPage(driver.getTitle());
-
-      String strTitlePage = driver.getTitle();
-      all_elements_text.add(strTitlePage);
-      System.out.println(element.getText());
-//      driver.navigate().back();
-    }
-*/
     dashBoardPage.clickOnUserIcon();
     dashBoardPage.clickOnExitBtn();
 

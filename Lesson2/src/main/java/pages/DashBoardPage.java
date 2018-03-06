@@ -15,20 +15,7 @@ public class DashBoardPage {
     private WebDriver driver;
     private By userIcon = By.id("employee_infos");
     private By exitBtn = By.id("header_logout");
-    private By dashBoard = By.id("dashboard");
 
-    private By orders= By.id("subtab-AdminParentOrders");
-    private By catalog = By.id("subtab-AdminParentCustomer");
-    private By customers = By.id("subtab-AdminParentCustomer");
-    private By services_support = By.id("subtab-AdminParentCustomerThreads");
-    private By statistic = By.id("subtab-AdminStats");
-    private By modules = By.id("subtab-AdminParentModulesSf");
-    private By design = By.id("subtab-AdminParentThemes");
-    private By delivery = By.id("subtab-AdminParentShipping");
-    private By type_pay = By.id("subtab-AdminParentPayment");
-    private By International = By.id("subtab-AdminInternational");
-    private By shop_parameters = By.id("subtab-ShopParameters");
-    private By configuration  = By.id("subtab-AdminAdvancedParameters");
 
     public DashBoardPage(WebDriver driver) {
       this.driver = driver;
@@ -48,34 +35,30 @@ public class DashBoardPage {
     WebDriverWait wait = new WebDriverWait(driver, 10);
     wait.until(ExpectedConditions.visibilityOfElementLocated(userIcon));
 
-    List<WebElement> myList = driver.findElements(By.className("menu"));
+    List<WebElement> myList = driver.findElements(By.xpath("//li[@class='maintab  has_submenu']"));
 
     if (myList.size() > 0) {
-      String strTitlePage = myList.get(1).getText();
-      System.out.println(strTitlePage);
-      String delimeter = "\n";
-      String[] subStr = strTitlePage.split(delimeter);
 
-      for (int i = 0; i < myList.size(); i++) {
+     for (WebElement menu : myList) {
 
-        myList.get(i).click();
-        driver.navigate().refresh();
+       String strTitlePage = menu.getText();
+       System.out.println("Пункт главного меню: " + strTitlePage);
+       menu.click();
+       driver.navigate().refresh();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(userIcon));
-        System.out.println(driver.getTitle());
-
-        if (driver.getTitle().contains(subStr[i])) {
+        if (driver.getTitle().contains(strTitlePage)) {
           //Pass
-          System.out.println("Page title contains" + subStr[i]);
+          System.out.println("После обновления страницы загаловок страницы: " + strTitlePage);
         } else {
           //Fail
-          System.out.println("Page title doesn't contains" + subStr[i]);
+          System.out.println("После обновления страницы загаловок страницы стал: " + strTitlePage);
         }
         driver.navigate().back();
-      }
+        }
 
     } else {
-      System.out.println("Dashboard doesn't contains any items!");
+      System.out.println("В главном меню нет пунктов!");
     }
   }
 
