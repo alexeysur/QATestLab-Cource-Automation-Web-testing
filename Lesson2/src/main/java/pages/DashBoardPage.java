@@ -55,6 +55,7 @@ public class DashBoardPage {
           System.out.println("После обновления страницы загаловок страницы стал: " + strTitlePage);
         }
         driver.navigate().back();
+
         }
 
     } else {
