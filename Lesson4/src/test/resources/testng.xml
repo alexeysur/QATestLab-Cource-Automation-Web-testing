@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ProductCreationSuite">
+    <test name="Test on [Chrome]">
+        <parameter name="selenium.browser" value="chrome" />
+        <classes>
+            <class name="pages.ProductCreationTest" />
+        </classes>
+    </test>
+
+    <test name="Test on [FireFox]">
+        <parameter name="selenium.browser" value="firefox" />
+        <classes>
+            <class name="pages.ProductCreationTest" />
+        </classes>
+    </test>
+
+    <test name="Test on [InternetExplorer]">
+        <parameter name="selenium.browser" value="ie" />
+        <classes>
+            <class name="pages.ProductCreationTest" />
+        </classes>
+    </test>
+
+</suite>
