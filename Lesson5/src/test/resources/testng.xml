@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OrderSuite">
+    <test name="Test on [Chrome]">
+        <parameter name="selenium.browser" value="chrome" />
+        <parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="pages.OrderTest" />
+        </classes>
+    </test>
+
+    <test name="Test on [Mobile]">
+        <parameter name="selenium.browser" value="mobile" />
+        <parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="pages.OrderTest" />
+        </classes>
+    </test>
+
+    <test name="Test on [FireFox]">
+        <parameter name="selenium.browser" value="firefox" />
+        <parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="pages.OrderTest" />
+        </classes>
+    </test>
+
+    <test name="Test on [Internet Exporer]">
+        <parameter name="selenium.browser" value="ie" />
+        <parameter name="selenium.hub"     value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="pages.OrderTest" />
+        </classes>
+    </test>
+</suite>
