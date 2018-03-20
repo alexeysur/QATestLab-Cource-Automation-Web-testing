@@ -14,10 +14,7 @@ import org.testng.asserts.SoftAssert;
 import utils.BaseEnvTest;
 import utils.CustomReporter;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.net.MalformedURLException;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -36,6 +33,7 @@ public class OrderTest extends BaseEnvTest {
   int productsQ;
 
   String nameP = "";
+  float priceP = 0;
   int previousQuantity;
   ProductData basketProduct;
 
@@ -95,7 +93,6 @@ public class OrderTest extends BaseEnvTest {
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#content > section > a")));
     driver.findElement(By.cssSelector("#content > section > a")).click();
 
- //   WebElement element = driver.findElement(By.cssSelector("div.col-sm-12.hidden-md-up.text-xs-center.showing"));
     WebElement element = driver.findElement(By.xpath("//div[@class=\"col-md-4\"]"));
 
     String prod = element.getText();
@@ -125,11 +122,7 @@ public class OrderTest extends BaseEnvTest {
 
     //Информация по товару на странице детального описания товара
     //Количество
-    //wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.product-quantities > span")));
 
- //   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"product-quantities\"]")));
-  //  driver.findElement(By.xpath("//div[@class=\"product-quantities\"]")).click();
-  //  driver.findElement(By.cssSelector("div.product-quantities > span")).click();
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class=\"product-quantities\"]")));
     driver.findElement(By.xpath("//div[@class=\"product-quantities\"]")).click();
 
@@ -144,12 +137,13 @@ public class OrderTest extends BaseEnvTest {
     }
 
     //Цена
-    String priceElement = driver.findElement(By.cssSelector("div.product-price.h5 > div > span")).getAttribute("content");
+    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.product-price.h5 > div > span")));
+    String priceElement = driver.findElement(By.cssSelector("div.product-price.h5 > div > span")).getText();
+    priceElement = priceElement.replaceAll("[^,0-9]","");
+    priceElement = priceElement.replaceAll("[,]",".");
 
-    float priceP=0;
     try {
       priceP = Float.parseFloat(priceElement);
-      priceP = (float) new BigDecimal(priceP).setScale(2, RoundingMode.UP).doubleValue();
     } catch (NumberFormatException e) {
       CustomReporter.log("Цена товара указана с ошибкой!");
     }
@@ -199,7 +193,6 @@ public class OrderTest extends BaseEnvTest {
     float basketPrice = 0;
     try {
       basketPrice = Float.parseFloat(actualPrice);
-      basketPrice = (float) new BigDecimal(basketPrice).setScale(2, RoundingMode.UP).doubleValue();
     } catch (NumberFormatException e) {
       CustomReporter.log("Price Format Exception");
     }
@@ -209,27 +202,16 @@ public class OrderTest extends BaseEnvTest {
     CustomReporter.logAction("Заполняем персональную информацию для заказа");
 
     driver.findElement(By.cssSelector("div.text-xs-center > a")).click();
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("firstname")));
     driver.findElement(By.name("firstname")).sendKeys(getName(randomNumber()));
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("lastname")));
     driver.findElement(By.name("lastname")).sendKeys(getName(randomNumber()));
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("email")));
     driver.findElement(By.name("email")).sendKeys(getEmail(randomNumber(), domain));
-    wait.until(ExpectedConditions.elementToBeClickable(By.name("continue")));
     driver.findElement(By.name("continue")).click();
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("address1")));
     driver.findElement(By.name("address1")).sendKeys(getName(randomNumber()));
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("postcode")));
     driver.findElement(By.name("postcode")).sendKeys(index());
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("city")));
     driver.findElement(By.name("city")).sendKeys(getName(randomNumber()));
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("confirm-addresses")));
     driver.findElement(By.name("confirm-addresses")).click();
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("confirmDeliveryOption")));
     driver.findElement(By.name("confirmDeliveryOption")).click();
-//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("payment-option-2")));
     driver.findElement(By.id("payment-option-2")).click();
-//    wait.until(ExpectedConditions.elementToBeClickable(By.name("conditions_to_approve[terms-and-conditions]")));
     driver.findElement(By.name("conditions_to_approve[terms-and-conditions]")).click();
 
     wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#payment-confirmation > div.ps-shown-by-js > button")));
@@ -251,7 +233,6 @@ public class OrderTest extends BaseEnvTest {
     float lastPrice = 0;
     try {
       lastPrice = Float.parseFloat(lastP);
-      lastPrice = (float) new BigDecimal(lastPrice).setScale(2, RoundingMode.UP).doubleValue();
     } catch (NumberFormatException e) {
       CustomReporter.log("Price Format Exception");
     }
@@ -267,8 +248,6 @@ public class OrderTest extends BaseEnvTest {
     driver.findElement(By.cssSelector("#content-hook-order-confirmation-footer > section > a")).click();
 
     nameP = WordUtils.capitalizeFully(basketProduct.getName());
-//    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h1/a[.='" + nameP + "']")));
-//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1/a[.='" + nameP + "']")));
 
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1/a[.='" + nameP + "']")));
