@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -47,7 +48,7 @@ public class OrderTest extends BaseEnvTest {
 
   @BeforeClass
   @Parameters({"selenium.hub", "selenium.browser"})
-  public void getConfiguredDriver(@Optional("http://localhost:4444/wd/hub")  String hubURL, @Optional("chrome") String browser) throws MalformedURLException {
+  public void getConfiguredDriver(@Optional("http://localhost:4444/wd/hub")  String hubURL, @Optional("ie") String browser) throws MalformedURLException {
    // hubURL = "http://localhost:4444/wd/hub";
     WebDriver wDriver  = hubURL.isEmpty() ? getWebDriver(browser) : getRemoteDriver(hubURL, browser);
 
@@ -104,16 +105,18 @@ public class OrderTest extends BaseEnvTest {
     } catch (NumberFormatException e) {
       CustomReporter.log("Number Format Exception <br />");
     }
+    int nowProductQuantity = 0;
     for (int i = 0; i < productsQ; i++) {
-      if (i<= 7) {
+      if (i< 7) {
+        nowProductQuantity++;
         elements = driver.findElements(By.xpath("//h1/a"));
         products.add(elements.get(i).getText());
       }
     }
 
     CustomReporter.logAction("Click random product");
-    id = randomQuantity(7);
-    scrollUntilVisible(elements.get(id));
+    id = randomQuantity(nowProductQuantity);
+//    scrollUntilVisible(elements.get(id));
     elements.get(id).click();
 
     CustomReporter.logAction("Click info about product");
@@ -206,6 +209,7 @@ public class OrderTest extends BaseEnvTest {
     driver.findElement(By.name("lastname")).sendKeys(getName(randomNumber()));
     driver.findElement(By.name("email")).sendKeys(getEmail(randomNumber(), domain));
     driver.findElement(By.name("continue")).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.name("address1")));
     driver.findElement(By.name("address1")).sendKeys(getName(randomNumber()));
     driver.findElement(By.name("postcode")).sendKeys(index());
     driver.findElement(By.name("city")).sendKeys(getName(randomNumber()));

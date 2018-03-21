@@ -1,0 +1,725 @@
+"C:\Program Files\Java\jdk1.8.0_144\bin\java" -Dmaven.multiModuleProjectDirectory=G:\Develop\QATestLab-Cource-Automation-Web-testing\QATestLab-Cource-Automation-Web-testing.git\Lesson5 "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.5\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.5\plugins\maven\lib\maven3\bin\m2.conf" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.5\lib\idea_rt.jar=7847:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.5\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.5\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar" org.codehaus.classworlds.Launcher -Didea.version=2017.2.5 test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for ua.in.sur.QATestAutomation:Lesson5:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.uncommons:reportng:jar -> version 1.1.2 vs 1.1.4 @ line 77, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 32, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Lesson5 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Lesson5 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Lesson5 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Lesson5 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Lesson5 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to G:\Develop\QATestLab-Cource-Automation-Web-testing\QATestLab-Cource-Automation-Web-testing.git\Lesson5\target\test-classes
+[WARNING] /G:/Develop/QATestLab-Cource-Automation-Web-testing/QATestLab-Cource-Automation-Web-testing.git/Lesson5/src/test/java/utils/BaseEnvTest.java: G:\Develop\QATestLab-Cource-Automation-Web-testing\QATestLab-Cource-Automation-Web-testing.git\Lesson5\src\test\java\utils\BaseEnvTest.java uses or overrides a deprecated API.
+[WARNING] /G:/Develop/QATestLab-Cource-Automation-Web-testing/QATestLab-Cource-Automation-Web-testing.git/Lesson5/src/test/java/utils/BaseEnvTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ Lesson5 ---
+[INFO] Surefire report directory: G:\Develop\QATestLab-Cource-Automation-Web-testing\QATestLab-Cource-Automation-Web-testing.git\Lesson5\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+??? 21, 2018 9:49:47 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+??? 21, 2018 9:49:48 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Open url: http://prestashop-automation.qatestlab.com.ua/
+Search for element: By.id: menu-icon
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="col-md-4"]
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+previousQuantity = 291
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.add > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //*[@id="cart-subtotal-products"]/span[1]
+Element found successfully
+Search for element: By.cssSelector: div.product-line-info
+Element found successfully
+basketProduct Name = Printed Dress
+Search for element: By.cssSelector: strong
+Element found successfully
+Search for element: By.cssSelector: div.text-xs-center > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.name: firstname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@1151e434
+Value successfully changed
+Search for element: By.name: lastname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@4659191b
+Value successfully changed
+Search for element: By.name: email
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@4c1909a3
+Value successfully changed
+Search for element: By.name: continue
+Element found successfully
+Click on element: button continue
+Element successfully clicked
+Search for element: By.name: address1
+Element found successfully
+Search for element: By.name: address1
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@d9345cd
+Value successfully changed
+Search for element: By.name: postcode
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@2d710f1a
+Value successfully changed
+Search for element: By.name: city
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@59505b48
+Value successfully changed
+Search for element: By.name: confirm-addresses
+Element found successfully
+Click on element: button confirm-addresses
+Element successfully clicked
+Search for element: By.name: confirmDeliveryOption
+Element found successfully
+Click on element: button confirmDeliveryOption
+Element successfully clicked
+Search for element: By.id: payment-option-2
+Element found successfully
+Click on element: input payment-option
+Element successfully clicked
+Search for element: By.name: conditions_to_approve[terms-and-conditions]
+Element found successfully
+Click on element: input conditions_to_approve[terms-and-conditions]
+Element successfully clicked
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: div > div.col-xs-2
+Element found successfully
+Search for element: By.xpath: //div[@class="col-xs-5 text-sm-right text-xs-left"]
+Element found successfully
+Search for element: By.cssSelector: div.col-sm-4.col-xs-9.details > span
+Element found successfully
+Search for element: By.cssSelector: #content-hook-order-confirmation-footer > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //h1/a[.='Printed Dress']
+Element found successfully
+Search for element: By.xpath: //h1/a[.='Printed Dress']
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+finalQuantity = 290
+??? 21, 2018 9:50:07 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+??? 21, 2018 9:50:10 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Open url: http://prestashop-automation.qatestlab.com.ua/
+Search for element: By.id: menu-icon
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="col-md-4"]
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+previousQuantity = 290
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.add > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //*[@id="cart-subtotal-products"]/span[1]
+Element found successfully
+Search for element: By.cssSelector: div.product-line-info
+Element found successfully
+basketProduct Name = Printed Dress
+Search for element: By.cssSelector: strong
+Element found successfully
+Search for element: By.cssSelector: div.text-xs-center > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.name: firstname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@6fdbe764
+Value successfully changed
+Search for element: By.name: lastname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@2e6a8155
+Value successfully changed
+Search for element: By.name: email
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@52719fb6
+Value successfully changed
+Search for element: By.name: continue
+Element found successfully
+Click on element: button continue
+Element successfully clicked
+Search for element: By.name: address1
+Element found successfully
+Search for element: By.name: address1
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@4a883b15
+Value successfully changed
+Search for element: By.name: postcode
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@25641d39
+Value successfully changed
+Search for element: By.name: city
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@5824a83d
+Value successfully changed
+Search for element: By.name: confirm-addresses
+Element found successfully
+Click on element: button confirm-addresses
+Element successfully clicked
+Search for element: By.name: confirmDeliveryOption
+Element found successfully
+Click on element: button confirmDeliveryOption
+Element successfully clicked
+Search for element: By.id: payment-option-2
+Element found successfully
+Click on element: input payment-option
+Element successfully clicked
+Search for element: By.name: conditions_to_approve[terms-and-conditions]
+Element found successfully
+Click on element: input conditions_to_approve[terms-and-conditions]
+Element successfully clicked
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: div > div.col-xs-2
+Element found successfully
+Search for element: By.xpath: //div[@class="col-xs-5 text-sm-right text-xs-left"]
+Element found successfully
+Search for element: By.cssSelector: div.col-sm-4.col-xs-9.details > span
+Element found successfully
+Search for element: By.cssSelector: #content-hook-order-confirmation-footer > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //h1/a[.='Printed Dress']
+Element found successfully
+Search for element: By.xpath: //h1/a[.='Printed Dress']
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+finalQuantity = 289
+??? 21, 2018 9:50:26 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+??? 21, 2018 9:50:31 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Open url: http://prestashop-automation.qatestlab.com.ua/
+Search for element: By.id: menu-icon
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="col-md-4"]
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+previousQuantity = 298
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.add > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //*[@id="cart-subtotal-products"]/span[1]
+Element found successfully
+Search for element: By.cssSelector: div.product-line-info
+Element found successfully
+basketProduct Name = Printed Chiffon Dress
+Search for element: By.cssSelector: strong
+Element found successfully
+Search for element: By.cssSelector: div.text-xs-center > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.name: firstname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@5d0bf09b
+Value successfully changed
+Search for element: By.name: lastname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@74e28667
+Value successfully changed
+Search for element: By.name: email
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@795509d9
+Value successfully changed
+Search for element: By.name: continue
+Element found successfully
+Click on element: button continue
+Element successfully clicked
+Search for element: By.name: address1
+Element found successfully
+Search for element: By.name: address1
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@cb0755b
+Value successfully changed
+Search for element: By.name: postcode
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@75437611
+Value successfully changed
+Search for element: By.name: city
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@79e4c792
+Value successfully changed
+Search for element: By.name: confirm-addresses
+Element found successfully
+Click on element: button confirm-addresses
+Element successfully clicked
+Search for element: By.name: confirmDeliveryOption
+Element found successfully
+Click on element: button confirmDeliveryOption
+Element successfully clicked
+Search for element: By.id: payment-option-2
+Element found successfully
+Click on element: input payment-option
+Element successfully clicked
+Search for element: By.name: conditions_to_approve[terms-and-conditions]
+Element found successfully
+Click on element: input conditions_to_approve[terms-and-conditions]
+Element successfully clicked
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: div > div.col-xs-2
+Element found successfully
+Search for element: By.xpath: //div[@class="col-xs-5 text-sm-right text-xs-left"]
+Element found successfully
+Search for element: By.cssSelector: div.col-sm-4.col-xs-9.details > span
+Element found successfully
+Search for element: By.cssSelector: #content-hook-order-confirmation-footer > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //h1/a[.='Printed Chiffon Dress']
+Element found successfully
+Search for element: By.xpath: //h1/a[.='Printed Chiffon Dress']
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+finalQuantity = 297
+??? 21, 2018 9:50:47 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Open url: http://prestashop-automation.qatestlab.com.ua/
+Search for element: By.id: menu-icon
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Search for element: By.cssSelector: #content > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="col-md-4"]
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Search for element: By.xpath: //h1/a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Search for element: By.cssSelector: li:nth-child(2) > a.nav-link
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+previousQuantity = 296
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.product-price.h5 > div > span
+Element found successfully
+Search for element: By.cssSelector: div.add > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Search for element: By.cssSelector: div.modal-body > div > div:nth-child(2) > div > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //*[@id="cart-subtotal-products"]/span[1]
+Element found successfully
+Search for element: By.cssSelector: div.product-line-info
+Element found successfully
+basketProduct Name = Blouse
+Search for element: By.cssSelector: strong
+Element found successfully
+Search for element: By.cssSelector: div.text-xs-center > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.name: firstname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@5ddeb7cb
+Value successfully changed
+Search for element: By.name: lastname
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@7188af83
+Value successfully changed
+Search for element: By.name: email
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@1033576a
+Value successfully changed
+Search for element: By.name: continue
+Element found successfully
+Click on element: button continue
+Element successfully clicked
+Search for element: By.name: address1
+Element found successfully
+Search for element: By.name: address1
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@359df09a
+Value successfully changed
+Search for element: By.name: postcode
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@792b749c
+Value successfully changed
+Search for element: By.name: city
+Element found successfully
+Fill input  with value [Ljava.lang.CharSequence;@514646ef
+Value successfully changed
+Search for element: By.name: confirm-addresses
+Element found successfully
+Click on element: button confirm-addresses
+Element successfully clicked
+Search for element: By.name: confirmDeliveryOption
+Element found successfully
+Click on element: button confirmDeliveryOption
+Element successfully clicked
+Search for element: By.id: payment-option-2
+Element found successfully
+Click on element: input payment-option
+Element successfully clicked
+Search for element: By.name: conditions_to_approve[terms-and-conditions]
+Element found successfully
+Click on element: input conditions_to_approve[terms-and-conditions]
+Element successfully clicked
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Search for element: By.cssSelector: #payment-confirmation > div.ps-shown-by-js > button
+Element found successfully
+Click on element: button 
+Element successfully clicked
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: h3.h1.card-title
+Element found successfully
+Search for element: By.cssSelector: div > div.col-xs-2
+Element found successfully
+Search for element: By.xpath: //div[@class="col-xs-5 text-sm-right text-xs-left"]
+Element found successfully
+Search for element: By.cssSelector: div.col-sm-4.col-xs-9.details > span
+Element found successfully
+Search for element: By.cssSelector: #content-hook-order-confirmation-footer > section > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.xpath: //h1/a[.='Blouse']
+Element found successfully
+Search for element: By.xpath: //h1/a[.='Blouse']
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Search for element: By.cssSelector: div.tabs > ul > li:nth-child(2) > a
+Element found successfully
+Click on element: a 
+Element successfully clicked
+Search for element: By.cssSelector: div.product-quantities > span
+Element found successfully
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+Click on element: div null
+Element successfully clicked
+Search for element: By.xpath: //div[@class="product-quantities"]
+Element found successfully
+finalQuantity = 294
+Tests run: 12, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 198.042 sec <<< FAILURE! - in TestSuite
+checkOrder(pages.OrderTest)  Time elapsed: 121.764 sec  <<< FAILURE!
+java.lang.AssertionError: The following asserts failed:
+	Ќеверное количество товара в магазине:  expected [295] but found [294]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at pages.OrderTest.checkOrder(OrderTest.java:278)
+
+
+Results :
+
+Failed tests: 
+pages.OrderTest.checkOrder(pages.OrderTest)
+  Run 1: PASS
+  Run 2: PASS
+  Run 3: PASS
+  Run 4: OrderTest.checkOrder:278 The following asserts failed:
+	Ќеверное количество товара в магазине:  expected [295] but found [294]
+
+
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:21 min
+[INFO] Finished at: 2018-03-21T09:53:04+02:00
+[INFO] Final Memory: 18M/170M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project Lesson5: There are test failures.
+[ERROR] 
+[ERROR] Please refer to G:\Develop\QATestLab-Cource-Automation-Web-testing\QATestLab-Cource-Automation-Web-testing.git\Lesson5\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Process finished with exit code 1
