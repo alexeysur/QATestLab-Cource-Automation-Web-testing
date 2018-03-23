@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -60,10 +61,11 @@ public abstract class BaseEnvTest {
         DesiredCapabilities capabilities;
 
         switch (browser) {
-           case "firefox":
-             propertyDriver = System.getProperty("user.dir") + "//src//test//resources//geckodriver.exe";
-             System.setProperty("webdriver.gecko.driver", propertyDriver);
-             return new FirefoxDriver();
+          case "firefox":
+             System.setProperty(
+                     "webdriver.ie.driver",
+                     new File(BaseEnvTest.class.getResource("/IEDriverServer.exe").getFile()).getPath());
+          return new FirefoxDriver();
           case "ie":
           case "internet explorer":
           case "iexplore":
@@ -78,9 +80,9 @@ public abstract class BaseEnvTest {
 
                 return new InternetExplorerDriver(options);
           case "mobile":
-            propertyDriver = System.getProperty("user.dir") + "//src//test//resources//chromedriver.exe";
-            System.setProperty("webdriver.chrome.driver", propertyDriver);
-
+            System.setProperty(
+                    "webdriver.chrome.driver",
+                    new File(BaseEnvTest.class.getResource("/chromedriver.exe").getFile()).getPath());
             Map<String, String> mobileEmulation = new HashMap<String, String>();
             mobileEmulation.put("deviceName", "Nexus 5X");
             Map<String, Object> chromeOptions = new HashMap<String, Object>();
@@ -91,8 +93,9 @@ public abstract class BaseEnvTest {
                return new ChromeDriver(capabilities);
           case "chrome":
           default:
-            propertyDriver = System.getProperty("user.dir") + "//src//test//resources//chromedriver.exe";
-            System.setProperty("webdriver.chrome.driver", propertyDriver);
+            System.setProperty(
+                    "webdriver.chrome.driver",
+                    new File(BaseEnvTest.class.getResource("/chromedriver.exe").getFile()).getPath());
             ChromeOptions opt = new ChromeOptions();
             opt.addArguments("start-maximized");
             return new ChromeDriver(opt);
